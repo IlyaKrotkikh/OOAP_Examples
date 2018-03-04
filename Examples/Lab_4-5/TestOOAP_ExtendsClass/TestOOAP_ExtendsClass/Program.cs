@@ -19,13 +19,10 @@ namespace TestOOAP_ExtendsClass
 
             // Создали объект "StyledBrush1" типа "StyledBrush" - стилизованная кисть и инициализировали его.
             StyledBrush StyledBrush1 = new StyledBrush(ConsoleColor.Magenta, 30, "Каллиграфия");
-            //StyledBrash1.GetInfo();
 
             // Добавляем "StyledBrush1" в список.
             // Так как StyledBrush унаследован от BaseBrush данная операция становится возможной.
             ListBrushes.Add(StyledBrush1);
-
-            StyledBrush1.ShowStyle();
 
             // Перечисляем все элементы списка и у каждого элемента вызываем метод "GetInfo()".
             foreach (BaseBrush bb in ListBrushes)

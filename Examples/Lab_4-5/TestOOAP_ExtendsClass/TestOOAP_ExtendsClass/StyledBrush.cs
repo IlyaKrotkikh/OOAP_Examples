@@ -37,11 +37,11 @@ namespace TestOOAP_ExtendsClass
         public override void GetInfo()
         {
             base.GetInfo(); // Вызов метода из родительского класса.
-            Console.WriteLine("Стиль кисти: " + CurretBrushStyle);
+            ShowStyle();
         }
 
         // Метод показывает текущий стиль кисти.
-        public void ShowStyle()
+        public void ShowStyle() 
         {
             Console.WriteLine("Стиль кисти: " + CurretBrushStyle);
         }
