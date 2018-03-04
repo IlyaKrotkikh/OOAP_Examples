@@ -20,7 +20,7 @@ namespace WpfApp_UsingLibrary
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         public OutputHandler CurrentHandler { get; set; }
         public List<DrawTool> ListTools { get; set; }
@@ -56,24 +56,26 @@ namespace WpfApp_UsingLibrary
             }
         }
 
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// Обработчик события на клик кнопки BtnPaint.
+        /// </summary>
+        /// <param name="sender">Источник инициализации события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void BtnPaint_Click(object sender, RoutedEventArgs e)
         {
             if (LstPaintTools.SelectedItem == null)
-                return;
-            (LstPaintTools.SelectedItem as DrawTool).Draw(CurrentHandler);
-            NotifyPropertyChanged();
+                return; // Если элемент в списке не выбран, завершаем работу метода.
+            (LstPaintTools.SelectedItem as DrawTool).Draw(CurrentHandler); // Указываем, что выбранный в списке объект это DrawTool и вызываем метод Draw().
         }
 
+        /// <summary>
+        /// Обработчик события на клик кнопки BtnExit.
+        /// </summary>
+        /// <param name="sender">Источник инициализации события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Close(); // Закрываем окно.
         }
     }
 }
