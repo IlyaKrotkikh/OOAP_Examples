@@ -10,18 +10,18 @@ namespace TestOOAP {
             // Создаем и инициализируем рандом для генерации ID
             Random rnd = new Random();
             
-            // Создаем и инициализируем объекты класа "Pen".
+            // Создаем и инициализируем объекты класса "Pen".
             Pen MyPen1 = new Pen(rnd.Next(0, 10000), ConsoleColor.DarkYellow, 20);
             Pen MyPen2 = new Pen(rnd.Next(0, 10000), 21);
             
             // Эмуляция написания ручкой.
-            MyPen1.WriteText("Writed Text");
-            MyPen1.WriteText("Writed Text");
-            MyPen2.WriteText("Writed Text");
+            MyPen1.WriteText("The written text");
+            MyPen1.WriteText("The written text");
+            MyPen2.WriteText("The written text");
             // Изменяем поле отвечающее за цвет.
-            Console.WriteLine("Manually changed color to Cyan");
+            Console.WriteLine("Manually changed colour to Cyan");
             MyPen2.Color = ConsoleColor.Cyan;
-            MyPen2.WriteText("Writed Text");
+            MyPen2.WriteText("The written text");
 
             Console.WriteLine();
             Console.WriteLine("Для проверки работы деструктора нажмите Enter");
