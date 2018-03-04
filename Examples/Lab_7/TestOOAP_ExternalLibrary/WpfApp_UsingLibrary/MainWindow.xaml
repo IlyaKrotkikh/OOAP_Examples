@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp_UsingLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_UsingLibrary"
+        mc:Ignorable="d"
+        Title="Example" Height="350" Width="525">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  BorderBrush="Coral"  BorderThickness="0,0,0,2" >
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <TextBlock FontSize="24">Library usage example.</TextBlock>
+            </StackPanel>
+        </Border>
+        <ListBox Grid.Row="1" Grid.Column="0" Margin="5" DataContext="{Binding CurrentHandler}" ItemsSource="{Binding LstOutputLog}">
+
+        </ListBox>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="LstPaintTools" Grid.Row="0" Margin="5" ItemsSource="{Binding ListTools}">
+                    
+            </ListBox>
+            <StackPanel Grid.Row="1">
+            
+            <Button x:Name="BtnPaint" Margin="5" Click="BtnPaint_Click">
+                <TextBlock Text="Paint"/>
+            </Button>
+            <Button x:Name="BtnExit" Margin="5" Click="BtnExit_Click">
+                <TextBlock Text="Exit"/>
+            </Button>
+        </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
