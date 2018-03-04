@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestOOAP_AbstractAndInterfaces
 {
-    class WindowsDotNetConsoleHandler : OutputHandler
+    public class WindowsDotNetConsoleHandler : OutputHandler
     {
         public override void Print(string Text)
         {

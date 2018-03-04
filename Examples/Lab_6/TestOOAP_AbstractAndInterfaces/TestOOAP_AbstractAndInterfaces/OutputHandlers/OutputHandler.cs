@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestOOAP_AbstractAndInterfaces
 {
-    abstract class OutputHandler
+    public abstract class OutputHandler
     {
         public abstract void PrintLine(string Text);
 

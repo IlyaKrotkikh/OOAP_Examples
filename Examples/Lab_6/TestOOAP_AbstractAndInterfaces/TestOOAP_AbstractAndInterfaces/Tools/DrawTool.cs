@@ -29,6 +29,6 @@ namespace TestOOAP_AbstractAndInterfaces
             }
         }
 
-        public abstract void Draw();
+        public abstract void Draw(OutputHandler ToolsOutputHandler);
     }
 }

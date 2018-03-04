@@ -6,6 +6,6 @@ namespace TestOOAP_AbstractAndInterfaces
 {
     public interface IFilled
     {
-        void Fill(string Color);
+        void Fill(string Color, OutputHandler ToolsOutputHandler);
     }
 }

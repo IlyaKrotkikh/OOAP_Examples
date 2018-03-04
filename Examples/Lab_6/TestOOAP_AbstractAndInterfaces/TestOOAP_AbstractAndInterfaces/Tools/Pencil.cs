@@ -6,29 +6,14 @@ namespace TestOOAP_AbstractAndInterfaces
 {
     class Pencil : DrawTool
     {
-        private OutputHandler _PencilOutputHandler;
-
-        public OutputHandler PencilOutputHandler
-        {
-            get
-            {
-                return this._PencilOutputHandler;
-            }
-            set
-            {
-                this._PencilOutputHandler = value;
-            }
-        }
-
-        public Pencil(string Color, OutputHandler PencilOutputHandler)
+        public Pencil(string Color)
         {
             base.Color = Color;
-            this.PencilOutputHandler = PencilOutputHandler;
         }
 
-        public override void Draw()
+        public override void Draw(OutputHandler ToolsOutputHandler)
         {
-            PencilOutputHandler.PrintLine("Рисуем карандашом, Цвет: " + Color);
+            ToolsOutputHandler.PrintLine("Рисуем карандашом, Цвет: " + Color);
         }
     }
 }

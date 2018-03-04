@@ -6,36 +6,21 @@ namespace TestOOAP_AbstractAndInterfaces
 {
     class Square : Figure, IFilled
     {
-        private OutputHandler _SquareOutputHandler;
-       
-        public OutputHandler SquareOutputHandler
-        {
-            get
-            {
-                return this._SquareOutputHandler;
-            }
-            set
-            {
-                this._SquareOutputHandler = value;
-            }
-        }
-
-        public Square(string BorderColor, int Height, int Width, OutputHandler SquareOutputHandler)
+        public Square(string BorderColor, int Height, int Width)
         {
             Color = BorderColor;
             this.Height = Height;
             this.Width = Width;
-            this.SquareOutputHandler = SquareOutputHandler;
         }
 
-        public override void Draw()
+        public override void Draw(OutputHandler ToolsOutputHandler)
         {
-            SquareOutputHandler.PrintLine("Рисуем кистью, Цвет: " + Color + " Размер: " + Height.ToString() + "x" + Width.ToString());
+            ToolsOutputHandler.PrintLine("Рисуем кистью, Цвет: " + Color + " Размер: " + Height.ToString() + "x" + Width.ToString());
         }
 
-        void IFilled.Fill(string Color)
+        void IFilled.Fill(string Color, OutputHandler ToolsOutputHandler)
         {
-            SquareOutputHandler.PrintLine("Квадрат залит цветом " + Color);
+            ToolsOutputHandler.PrintLine("Квадрат залит цветом " + Color);
         }
     }
 }

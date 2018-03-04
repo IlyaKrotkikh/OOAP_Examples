@@ -5,7 +5,7 @@ using System.IO;
 
 namespace TestOOAP_AbstractAndInterfaces
 {
-    class DotNetTextHandler : OutputHandler
+    public class DotNetTextHandler : OutputHandler
     {
         private Stream CurrentFileStram { get; set; }
         private StreamWriter OutputText {get;set;}
