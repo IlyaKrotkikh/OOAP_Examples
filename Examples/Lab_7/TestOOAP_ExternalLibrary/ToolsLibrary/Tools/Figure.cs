@@ -7,7 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Абстрактный класс Figure (Фигура), наследуется от абстрактного класса DrawTool
     /// </summary>
-    abstract class Figure : DrawTool
+    public abstract class Figure : DrawTool
     {
         private int _Height, _Width;
 

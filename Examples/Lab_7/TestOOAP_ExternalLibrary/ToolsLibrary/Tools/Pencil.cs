@@ -7,7 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Класс Pencil (Карандаш). Реализует абстрактный класс DrawTool
     /// </summary>
-    class Pencil : DrawTool
+    public class Pencil : DrawTool
     {
         /// <summary>
         /// Конструктор класса Pencil, инициализирует новый экземпляр данного класса.

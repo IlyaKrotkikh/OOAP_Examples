@@ -7,7 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Кисть. унаследована от абстрактного класса DrawTool.
     /// </summary>
-    class Brush : DrawTool
+    public class Brush : DrawTool
     {
         private int _Size;
 

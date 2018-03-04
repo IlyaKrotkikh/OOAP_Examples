@@ -7,7 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Абстрактный класс. Представляет инструмент для рисования.
     /// </summary>
-    abstract class DrawTool
+    public abstract class DrawTool
     {
         private string _Color;
 
