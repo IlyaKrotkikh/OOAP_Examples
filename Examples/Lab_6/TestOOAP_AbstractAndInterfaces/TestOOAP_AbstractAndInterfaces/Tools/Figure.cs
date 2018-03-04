@@ -4,10 +4,16 @@ using System.Text;
 
 namespace TestOOAP_AbstractAndInterfaces
 {
-    abstract class Figure: DrawTool
+    /// <summary>
+    /// Абстрактный класс Figure (Фигура), наследуется от абстрактного класса DrawTool
+    /// </summary>
+    abstract class Figure : DrawTool
     {
         private int _Height, _Width;
 
+        /// <summary>
+        /// Поле, содержит данные о высоте фигуры.
+        /// </summary>
         public int Height
         {
             get
@@ -19,6 +25,9 @@ namespace TestOOAP_AbstractAndInterfaces
                 this._Height = value;
             }
         }
+        /// <summary>
+        /// Поле, содержит информацию о ширине фигуры.
+        /// </summary>
         public int Width
         {
             get

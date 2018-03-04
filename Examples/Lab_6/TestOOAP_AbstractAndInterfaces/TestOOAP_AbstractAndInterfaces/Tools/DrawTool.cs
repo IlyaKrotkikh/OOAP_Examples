@@ -4,10 +4,16 @@ using System.Text;
 
 namespace TestOOAP_AbstractAndInterfaces
 {
+    /// <summary>
+    /// Абстрактный класс. Представляет инструмент для рисования.
+    /// </summary>
     abstract class DrawTool
     {
         private string _Color;
 
+        /// <summary>
+        /// Цвет, которым рисует инструмент.
+        /// </summary>
         public string Color
         {
             get
@@ -29,6 +35,10 @@ namespace TestOOAP_AbstractAndInterfaces
             }
         }
 
+        /// <summary>
+        /// Абстрактный метод (реализация отсутствует). Представляет метод, позволяющий рисовать инструментом.
+        /// </summary>
+        /// <param name="ToolsOutputHandler">Контроллер вывода данных.</param>
         public abstract void Draw(OutputHandler ToolsOutputHandler);
     }
 }
