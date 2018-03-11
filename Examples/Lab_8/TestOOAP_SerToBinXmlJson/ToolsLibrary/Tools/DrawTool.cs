@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ToolsLibrary
@@ -8,6 +9,7 @@ namespace ToolsLibrary
     /// Абстрактный класс. Представляет инструмент для рисования.
     /// </summary>
     [Serializable]
+    [DataContract]
     public abstract class DrawTool
     {
         private string _Color;
@@ -15,6 +17,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Цвет, которым рисует инструмент.
         /// </summary>
+        [DataMember]
         public string Color
         {
             get

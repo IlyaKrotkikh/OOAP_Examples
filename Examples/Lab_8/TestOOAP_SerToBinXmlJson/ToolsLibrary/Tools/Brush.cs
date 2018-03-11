@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ToolsLibrary
@@ -8,6 +9,7 @@ namespace ToolsLibrary
     /// Кисть. унаследована от абстрактного класса DrawTool.
     /// </summary>
     [Serializable]
+    [DataContract]
     public class Brush : DrawTool
     {
         private int _Size;
@@ -15,6 +17,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Размер пера.
         /// </summary>
+        [DataMember]
         public int Size
         {
             get

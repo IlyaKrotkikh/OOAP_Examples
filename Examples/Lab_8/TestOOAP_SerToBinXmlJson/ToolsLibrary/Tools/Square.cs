@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ToolsLibrary
@@ -8,6 +9,7 @@ namespace ToolsLibrary
     /// Класс Square (Квадрат). Реализует абстрактный класс Figure и интерфейс IFilled.
     /// </summary>
     [Serializable]
+    [DataContract]
     public class Square : Figure, IFilled
     {
         /// <summary>

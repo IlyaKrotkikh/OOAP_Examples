@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ToolsLibrary
@@ -8,6 +9,7 @@ namespace ToolsLibrary
     /// Абстрактный класс Figure (Фигура), наследуется от абстрактного класса DrawTool
     /// </summary>
     [Serializable]
+    [DataContract]
     public abstract class Figure : DrawTool
     {
         private int _Height, _Width;
@@ -15,6 +17,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Поле, содержит данные о высоте фигуры.
         /// </summary>
+        [DataMember]
         public int Height
         {
             get
@@ -29,6 +32,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Поле, содержит информацию о ширине фигуры.
         /// </summary>
+        [DataMember]
         public int Width
         {
             get
