@@ -23,25 +23,29 @@ namespace TestOOAP_SerJson
             ListTools.Add(new Brush("Красный", 12));
             ListTools.Add(new Square("Серый", 10, 10));
 
+            // Коллекция типов данных, которые предстоит сериализовать.
             List<Type> ListSerKnownTypes = new List<Type>();
-            foreach (DrawTool dt in ListTools)
-            {
+            foreach (DrawTool dt in ListTools) // Перечисляем все типы данных из коллекции.
                 ListSerKnownTypes.Add(dt.GetType());
-            }
+
+            // Создан объект-"сериализатор" в json.
+            // В параметры конструктора передаются типы данных, которые будут проходить процедуру сериализации в файл
             DataContractJsonSerializer js = new DataContractJsonSerializer(ListTools.GetType(), ListSerKnownTypes);
 
-
-
+            // Поток, пишущий в файл.
             Stream writer = new FileStream("OutData.json", FileMode.Create, FileAccess.Write, FileShare.None);
-            js.WriteObject(writer, ListTools);
-            writer.Close();
+            js.WriteObject(writer, ListTools); // Сериализуем объект в поток.
+            writer.Close(); // Закрываем поток.
 
+            // Выводим сообщении о сериализации в файл.
             CurrentHandler.PrintLine("ListTools сериализован в файл \"OutData.Json\"");
 
+            // Поток, читающий из файла.
             Stream reader = new FileStream("OutData.json", FileMode.Open, FileAccess.Read, FileShare.None);
-            List<DrawTool> DeserListHeads = js.ReadObject(reader) as List<DrawTool>;
-            reader.Close();
+            List<DrawTool> DeserListHeads = js.ReadObject(reader) as List<DrawTool>; // Десериализуем из потока в объект.
+            reader.Close(); // Закрываем поток.
 
+            // Выводим сообщении о десериализации из файла.
             CurrentHandler.PrintLine("Десериализован файл \"OutData.Json\" в DeserListTools");
 
 

@@ -9,8 +9,8 @@ namespace ToolsLibrary
     /// <summary>
     /// Абстрактный класс. Представляет инструмент для рисования.
     /// </summary>
-    [Serializable]
-    [DataContract]
+    [Serializable] // Указывает, что класс может быть сериализован.  (Необходим для сериализации в Бинарный формат файла)
+    [DataContract] // Указывает, что этот элемент является частью контракта данных и сериализуется DataContractSerializer. (Необходим для сериализации в Json)
     public abstract class DrawTool
     {
         private string _Color;
@@ -18,7 +18,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Цвет, которым рисует инструмент.
         /// </summary>
-        [DataMember]
+        [DataMember] // Указываем, что поле "Color" должно сериализоваться. (Необходим для сериализации в Json)
         [XmlAttribute]
         public string Color
         {

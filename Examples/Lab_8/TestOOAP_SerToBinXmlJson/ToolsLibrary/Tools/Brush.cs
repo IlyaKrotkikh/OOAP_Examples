@@ -9,8 +9,8 @@ namespace ToolsLibrary
     /// <summary>
     /// Кисть. унаследована от абстрактного класса DrawTool.
     /// </summary>
-    [Serializable]
-    [DataContract]
+    [Serializable] // Указывает, что класс может быть сериализован.  (Необходим для сериализации в Бинарный формат файла)
+    [DataContract] // Указывает, что этот элемент является частью контракта данных и сериализуется DataContractSerializer. (Необходим для сериализации в Json)
     public class Brush : DrawTool
     {
         private int _Size;
@@ -18,7 +18,7 @@ namespace ToolsLibrary
         /// <summary>
         /// Размер пера.
         /// </summary>
-        [DataMember]
+        [DataMember] // Указываем, что поле "Size" должно сериализоваться. (Необходим для сериализации в Json)
         [XmlAttribute]
         public int Size
         {
@@ -44,8 +44,11 @@ namespace ToolsLibrary
             this.Size = Size;
         }
 
-        internal Brush()
-        { }
+        /// <summary>
+        /// Конструктор класса Brush без параметров.
+        /// (Необходим для десериализации из Xml)
+        /// </summary>
+        internal Brush() { }
 
         /// <summary>
         /// Реализация метода Draw. Эмитируется рисование. 

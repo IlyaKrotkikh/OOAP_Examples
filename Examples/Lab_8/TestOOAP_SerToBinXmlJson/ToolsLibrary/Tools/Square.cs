@@ -8,8 +8,8 @@ namespace ToolsLibrary
     /// <summary>
     /// Класс Square (Квадрат). Реализует абстрактный класс Figure и интерфейс IFilled.
     /// </summary>
-    [Serializable]
-    [DataContract]
+    [Serializable] // Указывает, что класс может быть сериализован.  (Необходим для сериализации в Бинарный формат файла)
+    [DataContract] // Указывает, что этот элемент является частью контракта данных и сериализуется DataContractSerializer. (Необходим для сериализации в Json)
     public class Square : Figure, IFilled
     {
         /// <summary>
@@ -25,8 +25,11 @@ namespace ToolsLibrary
             this.Width = Width;
         }
 
-        internal Square()
-        { }
+        /// <summary>
+        /// Конструктор класса Square без параметров.
+        /// (Необходим для десериализации из Xml)
+        /// </summary>
+        internal Square() { }
 
         /// <summary>
         /// Реализация метода Draw из абстрактного класса DrawTool. Имитирует рисование квадрата.

@@ -23,17 +23,23 @@ namespace TestOOAP_SerBin
             ListTools.Add(new Brush("Красный", 12));
             ListTools.Add(new Square("Серый", 10, 10));
 
+            // Создан объект-"сериализатор" в бинарный формат.
             BinaryFormatter bf = new BinaryFormatter();
-            Stream writer = new FileStream("OutData.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            bf.Serialize(writer, ListTools);
-            writer.Close();
 
+            // Поток, пишущий в файл.
+            Stream writer = new FileStream("OutData.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            bf.Serialize(writer, ListTools); // Сериализуем объект в поток.
+            writer.Close(); // Закрываем поток.
+
+            // Выводим сообщении о сериализации в файл.
             CurrentHandler.PrintLine("ListTools сериализован в файл \"OutData.bin\"");
 
+            // Поток, читающий из файла.
             Stream reader = new FileStream("OutData.bin", FileMode.Open, FileAccess.Read, FileShare.None);
-            List<DrawTool> DeserListTools = bf.Deserialize(reader) as List<DrawTool>;
-            reader.Close();
+            List<DrawTool> DeserListTools = bf.Deserialize(reader) as List<DrawTool>; // Десериализуем из потока в объект.
+            reader.Close(); // Закрываем поток.
 
+            // Выводим сообщении о десериализации из файла.
             CurrentHandler.PrintLine("Десериализован файл \"OutData.bin\" в DeserListTools");
 
 

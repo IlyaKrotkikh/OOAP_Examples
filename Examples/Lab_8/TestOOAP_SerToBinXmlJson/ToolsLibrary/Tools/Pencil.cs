@@ -8,8 +8,8 @@ namespace ToolsLibrary
     /// <summary>
     /// Класс Pencil (Карандаш). Реализует абстрактный класс DrawTool
     /// </summary>
-    [Serializable]
-    [DataContract]
+    [Serializable] // Указывает, что класс может быть сериализован.  (Необходим для сериализации в Бинарный формат файла)
+    [DataContract] // Указывает, что этот элемент является частью контракта данных и сериализуется DataContractSerializer. (Необходим для сериализации в Json)
     public class Pencil : DrawTool
     {
         /// <summary>
@@ -22,6 +22,10 @@ namespace ToolsLibrary
             base.Color = Color;
         }
 
+        /// <summary>
+        /// Конструктор класса Pencil без параметров.
+        /// (Необходим для десериализации из Xml)
+        /// </summary>
         internal Pencil()
         { }
 
