@@ -7,6 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Класс Square (Квадрат). Реализует абстрактный класс Figure и интерфейс IFilled.
     /// </summary>
+    [Serializable]
     public class Square : Figure, IFilled
     {
         /// <summary>

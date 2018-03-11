@@ -7,6 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Кисть. унаследована от абстрактного класса DrawTool.
     /// </summary>
+    [Serializable]
     public class Brush : DrawTool
     {
         private int _Size;

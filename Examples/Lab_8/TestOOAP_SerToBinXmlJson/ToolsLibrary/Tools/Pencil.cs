@@ -7,6 +7,7 @@ namespace ToolsLibrary
     /// <summary>
     /// Класс Pencil (Карандаш). Реализует абстрактный класс DrawTool
     /// </summary>
+    [Serializable]
     public class Pencil : DrawTool
     {
         /// <summary>
