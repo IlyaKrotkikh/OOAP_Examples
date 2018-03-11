@@ -23,11 +23,20 @@ namespace TestOOAP_SerXml
             ListTools.Add(new Brush("Красный", 12));
             ListTools.Add(new Square("Серый", 10, 10));
 
-            // Коллекция типов данных, которые предстоит сериализовать.
+            // Коллекция типов уникальных данных, которые предстоит сериализовать.
             List<Type> ListSerKnownTypes = new List<Type>();
             foreach (DrawTool dt in ListTools) // Перечисляем все типы данных из коллекции.
-                ListSerKnownTypes.Add(dt.GetType());
-            
+            {
+                try
+                {
+                    ListSerKnownTypes.Add(dt.GetType());
+                }
+                catch (Exception ex)
+                {
+                    CurrentHandler.PrintLine(ex.Message);
+                }
+            }
+
             // Создан объект-"сериализатор" в xml.
             // В параметры конструктора передаются типы данных, которые будут проходить процедуру сериализации в файл
             XmlSerializer xs = new XmlSerializer(ListTools.GetType(), ListSerKnownTypes.ToArray());

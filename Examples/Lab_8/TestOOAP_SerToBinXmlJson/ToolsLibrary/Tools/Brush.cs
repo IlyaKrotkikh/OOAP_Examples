@@ -19,7 +19,6 @@ namespace ToolsLibrary
         /// Размер пера.
         /// </summary>
         [DataMember] // Указываем, что поле "Size" должно сериализоваться. (Необходим для сериализации в Json)
-        [XmlAttribute]
         public int Size
         {
             get

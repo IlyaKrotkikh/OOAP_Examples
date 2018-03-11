@@ -19,7 +19,6 @@ namespace ToolsLibrary
         /// Поле, содержит данные о высоте фигуры.
         /// </summary>
         [DataMember] // Указываем, что поле "Height" должно сериализоваться. (Необходим для сериализации в Json)
-        [XmlAttribute]
         public int Height
         {
             get
@@ -36,7 +35,6 @@ namespace ToolsLibrary
         /// Поле, содержит информацию о ширине фигуры.
         /// </summary>
         [DataMember] // Указываем, что поле "Width" должно сериализоваться. (Необходим для сериализации в Json)
-        [XmlAttribute]
         public int Width
         {
             get

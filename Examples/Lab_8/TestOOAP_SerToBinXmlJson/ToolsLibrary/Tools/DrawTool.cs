@@ -19,7 +19,6 @@ namespace ToolsLibrary
         /// Цвет, которым рисует инструмент.
         /// </summary>
         [DataMember] // Указываем, что поле "Color" должно сериализоваться. (Необходим для сериализации в Json)
-        [XmlAttribute]
         public string Color
         {
             get
