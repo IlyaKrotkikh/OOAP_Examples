@@ -22,6 +22,9 @@ namespace ToolsLibrary
             base.Color = Color;
         }
 
+        internal Pencil()
+        { }
+
         /// <summary>
         /// Реализация метода Draw абстрактного класса DrawTool. Имитирует рисование карандашом.
         /// </summary>

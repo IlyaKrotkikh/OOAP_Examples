@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ToolsLibrary
 {
@@ -18,6 +19,7 @@ namespace ToolsLibrary
         /// Поле, содержит данные о высоте фигуры.
         /// </summary>
         [DataMember]
+        [XmlAttribute]
         public int Height
         {
             get
@@ -33,6 +35,7 @@ namespace ToolsLibrary
         /// Поле, содержит информацию о ширине фигуры.
         /// </summary>
         [DataMember]
+        [XmlAttribute]
         public int Width
         {
             get

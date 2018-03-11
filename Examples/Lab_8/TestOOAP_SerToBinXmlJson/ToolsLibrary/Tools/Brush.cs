@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ToolsLibrary
 {
@@ -18,6 +19,7 @@ namespace ToolsLibrary
         /// Размер пера.
         /// </summary>
         [DataMember]
+        [XmlAttribute]
         public int Size
         {
             get
@@ -41,6 +43,9 @@ namespace ToolsLibrary
             base.Color = Color;
             this.Size = Size;
         }
+
+        internal Brush()
+        { }
 
         /// <summary>
         /// Реализация метода Draw. Эмитируется рисование. 

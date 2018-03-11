@@ -25,6 +25,9 @@ namespace ToolsLibrary
             this.Width = Width;
         }
 
+        internal Square()
+        { }
+
         /// <summary>
         /// Реализация метода Draw из абстрактного класса DrawTool. Имитирует рисование квадрата.
         /// </summary>

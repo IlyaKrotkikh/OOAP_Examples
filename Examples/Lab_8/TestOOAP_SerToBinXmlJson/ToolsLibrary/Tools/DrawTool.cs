@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ToolsLibrary
 {
@@ -18,6 +19,7 @@ namespace ToolsLibrary
         /// Цвет, которым рисует инструмент.
         /// </summary>
         [DataMember]
+        [XmlAttribute]
         public string Color
         {
             get
