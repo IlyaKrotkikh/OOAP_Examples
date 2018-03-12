@@ -11,6 +11,7 @@
 - [Professorweb - Руководство C# | Классы](https://professorweb.ru/my/csharp/charp_theory/level5/5_1.php)
 - [Docs.microsoft - Классы (Руководство по программированию на C#)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/classes-and-structs/classes) 
 - Объектно-ориентированное мышление – Вайсфельд М. (глава 4, 5)
+
 Литература для ознакомления:
 - [Mycsharp - Классы в Си-шарп. Объявление классов и создание объектов](http://mycsharp.ru/post/24/2013_06_21_klassy_v_si-sharp_obyavlenie_klassov_i_sozdanie_obektov.html)
 - Microsoft Visual C#. Подробное руководство – Шарп Джон.
