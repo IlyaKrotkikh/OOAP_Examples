@@ -15,4 +15,6 @@
 9. Лабораторная работа – Проектирование классов, обработка исключений
 
 ___
+[Журнал по предмету](https://docs.google.com/spreadsheets/d/1oPJBqaLv4TELEWI5tGYXiT4nOeXMaIBXvgDNjSeb3y4/edit?usp=sharing "ООАиП-ПИб2301 on Google docs")
+___
 Created by Ilya Krotkikh: ivashca99@gmail.com
