@@ -42,9 +42,13 @@
   <ItemGroup>
     <Compile Include="Tools\Brush.cs" />
     <Compile Include="OutputHandlers\DotNetTextHandler.cs" />
+    <Compile Include="Tools\Builders\ConcreteBuilder\BrushBuilder.cs" />
+    <Compile Include="Tools\Builders\ConcreteBuilder\PencilBuilder.cs" />
+    <Compile Include="Tools\Builders\ConcreteBuilder\SquareBuilder.cs" />
     <Compile Include="Tools\DrawTool.cs" />
     <Compile Include="Tools\Figure.cs" />
-    <Compile Include="Tools\Creators\ToolsCreator.cs" />
+    <Compile Include="Tools\Builders\ToolBuilder.cs" />
+    <Compile Include="Tools\Interfaces\IBuilder.cs" />
     <Compile Include="Tools\Interfaces\IFilled.cs" />
     <Compile Include="OutputHandlers\OutputHandler.cs" />
     <Compile Include="Tools\Interfaces\ITools.cs" />
