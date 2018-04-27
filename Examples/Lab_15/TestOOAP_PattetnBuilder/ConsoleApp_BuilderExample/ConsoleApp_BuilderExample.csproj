@@ -7,8 +7,8 @@
     <ProjectGuid>{B3DFD228-FA2E-44F5-A6FF-1B218B192C5B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApp_FactoryExample</RootNamespace>
-    <AssemblyName>ConsoleApp_FactoryExample</AssemblyName>
+    <RootNamespace>ConsoleApp_BuilderExample</RootNamespace>
+    <AssemblyName>ConsoleApp_BuilderExample</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
