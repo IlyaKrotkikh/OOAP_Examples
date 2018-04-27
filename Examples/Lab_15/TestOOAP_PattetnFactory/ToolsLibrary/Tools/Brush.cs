@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ToolsLibrary.Tools.Interfaces;
 
 namespace ToolsLibrary
 {
     /// <summary>
     /// Кисть. унаследована от абстрактного класса DrawTool.
     /// </summary>
-    public class Brush : DrawTool, ITools
+    public class Brush : DrawTool
     {
         private int _Size;
 

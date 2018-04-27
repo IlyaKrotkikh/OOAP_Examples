@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ToolsLibrary.Tools.Interfaces;
 
 namespace ToolsLibrary
 {
     /// <summary>
     /// Абстрактный класс. Представляет инструмент для рисования.
     /// </summary>
-    public abstract class DrawTool
+    public abstract class DrawTool: ITools
     {
         private string _Color;
 
